@@ -1,0 +1,62 @@
+[
+  {
+    "model": "auth.user",
+    "fields": {
+      "password": "pbkdf2_sha256$260000$HESUShA18eDc1h2TeMs75w$nqhoL3q2ae5A713N1qbR3pz+AMW0TUuXpcNzP7FDOM4=",
+      "is_superuser": true,
+      "username": "blessed",
+      "first_name": "Blessed",
+      "last_name": "Sibanda",
+      "email": "blessed@example.com",
+      "is_staff": true,
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "fields": {
+      "password": "pbkdf2_sha256$260000$HESUShA18eDc1h2TeMs75w$nqhoL3q2ae5A713N1qbR3pz+AMW0TUuXpcNzP7FDOM4=",
+      "is_superuser": false,
+      "username": "chiedza",
+      "first_name": "Chiedza",
+      "last_name": "Toro",
+      "email": "chiedza@example.com",
+      "is_staff": true,
+      "is_active": true,
+      "groups": [["Instructors"]],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "fields": {
+      "password": "pbkdf2_sha256$260000$HESUShA18eDc1h2TeMs75w$nqhoL3q2ae5A713N1qbR3pz+AMW0TUuXpcNzP7FDOM4=",
+      "is_superuser": false,
+      "username": "rose",
+      "first_name": "Rose",
+      "last_name": "Chiwara",
+      "email": "rose@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "groups": [["Instructors"]],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "fields": {
+      "password": "pbkdf2_sha256$260000$HESUShA18eDc1h2TeMs75w$nqhoL3q2ae5A713N1qbR3pz+AMW0TUuXpcNzP7FDOM4=",
+      "is_superuser": false,
+      "username": "myk",
+      "first_name": "Michael",
+      "last_name": "Mutopa",
+      "email": "myk@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
