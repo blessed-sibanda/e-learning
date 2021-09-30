@@ -80,6 +80,25 @@ Load sample data to database using fixtures
 (e-learning) $ python manage.py loaddata subjects groups users
 ```
 
+### Install Memcached
+
+Download Memcached from [https://memcached.org/downloads](https://memcached.org/downloads). If you are using
+Linux, you can download and install Memcached using the following commands:
+
+```bash
+$ wget http://memcached.org/latest
+$ tar -zxvf latest
+$ cd memcached-1.x.x
+$ ./configure && make && make test && sudo make install
+````
+If you are using macOS, you can install Memcached with the Homebrew package manager using the command brew install memcached . You can download Homebrew from https://brew.sh/ .
+
+After installing Memcached, open a shell and start it using the following command:
+
+```bash
+$ memcached -l 127.0.0.1:11211
+```
+
 Run the development server 
 ```bash
 (e-learning) $ python manage.py runserver
