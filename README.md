@@ -75,6 +75,11 @@ Create a superuser account
 (e-learning) $ python manage.py createsuperuser
 ```
 
+Load **Subjects** data to database from fixtures
+```bash
+(e-learning) $ python manage.py loaddata courses/fixtures/subjects.json
+```
+
 Run the development server 
 ```bash
 (e-learning) $ python manage.py runserver

@@ -2,15 +2,25 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+class SubjectManager(models.Manager):
+    def get_natural_key(self, slug):
+        return self.get(slug=slug)
+
+
 class Subject(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
+
+    objects = SubjectManager()
 
     class Meta:
         ordering = ['title']
 
     def __str__(self):
         return self.title
+
+    def natural_key(self):
+        return (self.slug,)
 
 
 class Course(models.Model):
