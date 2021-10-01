@@ -12,6 +12,8 @@ A django e-learning platform
 
 - JSON RESTful API with endpoints to retrieve subjects, retrieve available courses and their contents, and enroll in a course
 
+- Students can access a different chat room for each course they are enrolled on
+
 ## SetUp Instructions
 
 ### Install [Git](https://git-scm.com/downloads)
