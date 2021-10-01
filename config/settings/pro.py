@@ -2,13 +2,13 @@ from .base import *
 
 DEBUG = False
 
-ADMINS = (
+ADMINS = [
     (
         'Blessed S', 'blessedsibanda.me@gmail.com'
     )
-)
+]
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['elearning.com', 'www.elearning.com']
 
 DATABASES = {
     'default': {
