@@ -6,3 +6,4 @@ package.json
 package.*
 static/
 config/ssl/e_learning.key
+config/logs/nginx_access.log
