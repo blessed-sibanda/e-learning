@@ -4,7 +4,13 @@ A django e-learning platform
 
 ## Features
 
-- Content Management System for instructors to create courses and their contents
+- Content Management System for instructors to create courses, modules and their contents
+
+- Course catalog where students can browse and enroll in different courses. 
+
+- Students can access contents for their enrolled courses
+
+- JSON RESTful API with endpoints to retrieve subjects, retrieve available courses and their contents, and enroll in a course
 
 ## SetUp Instructions
 
@@ -76,6 +82,7 @@ Create a superuser account
 ```
 
 Load sample data to database using fixtures
+
 ```bash
 (e-learning) $ python manage.py loaddata subjects groups users
 ```
@@ -90,7 +97,8 @@ $ wget http://memcached.org/latest
 $ tar -zxvf latest
 $ cd memcached-1.x.x
 $ ./configure && make && make test && sudo make install
-````
+```
+
 If you are using macOS, you can install Memcached with the Homebrew package manager using the command brew install memcached . You can download Homebrew from https://brew.sh/ .
 
 After installing Memcached, open a shell and start it using the following command:
@@ -99,7 +107,8 @@ After installing Memcached, open a shell and start it using the following comman
 $ memcached -l 127.0.0.1:11211
 ```
 
-Run the development server 
+Run the development server
+
 ```bash
 (e-learning) $ python manage.py runserver
 ```

@@ -11,6 +11,7 @@ django-braces = "*"
 django-embed-video = "*"
 python-memcached = "*"
 django-memcache-status = "*"
+djangorestframework = "*"
 
 [dev-packages]
 autopep8 = "*"
