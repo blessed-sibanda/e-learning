@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # 'memcache_status',
     'rest_framework',
     'chat.apps.ChatConfig',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -77,6 +78,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
+ASGI_APPLICATION = 'config.routing.application'
 
 
 # Database
