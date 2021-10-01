@@ -10,6 +10,9 @@ ADMINS = [
 
 ALLOWED_HOSTS = ['elearning.com', 'www.elearning.com']
 
+SECURE_SSL_REDIRECT = True
+CSRF_COOKIE_SECURE = True
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
