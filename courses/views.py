@@ -31,7 +31,7 @@ class CourseListView(TemplateResponseMixin, View):
 
         all_courses = Course.objects.annotate(
             total_modules=Count('modules'))
-        
+
         if subject:
             subject = get_object_or_404(Subject, slug=subject)
             key = f'subject_{subject.id}_courses'
