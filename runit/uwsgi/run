@@ -2,12 +2,12 @@
 
 source /elearning/venv/bin/activate 
 
-export PG_PASSWORD="$(DJANGO_DB_PASSWORD)"
+export PG_PASSWORD="$DJANGO_DB_PASSWORD"
 psql \
-    -h "DJANGO_DB_HOST" \
-    -p "DJANGO_DB_PORT" \
-    -U "DJANGO_DB_USER" \
-    -d "DJANGO_DB_NAME" 
+    -h "$DJANGO_DB_HOST" \
+    -p "$DJANGO_DB_PORT" \
+    -U "$DJANGO_DB_USER" \
+    -d "$DJANGO_DB_NAME" 
 
 if [[ $? != 0 ]]; then 
     echo "no db server"

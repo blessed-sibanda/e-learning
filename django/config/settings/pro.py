@@ -5,16 +5,16 @@ DEBUG = False
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
-assert SECRET_KEY is not None, \
-    'Please provide DJANGO_SECRET_KET environment variable with a value'
-
 ADMINS = [
     (
         'Blessed S', 'blessedsibanda.me@gmail.com'
     )
 ]
 
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS')
+if os.getenv('DJANGO_ALLOWED_HOSTS'):
+    ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS').split(',')
+else:
+    ALLOWED_HOSTS = ['*']
 
 SECURE_SSL_REDIRECT = True
 CSRF_COOKIE_SECURE = True
@@ -29,3 +29,5 @@ DATABASES = {
         'PORT': os.getenv('DJANGO_DB_PORT'),
     }
 }
+
+print(ALLOWED_HOSTS)

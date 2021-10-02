@@ -1,4 +1,4 @@
-FROM phusion/baseimage
+FROM ubuntu:18.04
 
 # add code and directories
 RUN mkdir /elearning
@@ -11,8 +11,11 @@ RUN touch /var/log/elearning/elearning.log
 
 # install packages
 RUN apt-get -y update 
-RUN apt-get install -y \    
+RUN apt-get install -y \   
+    nginx-core \
     nginx \
+    iproute2 \
+    libnginx-mod-http-geoip \
     postgresql-client \
     python3.8 \
     python3-pip 
