@@ -7,4 +7,4 @@ export DJANGO_SETTINGS_MODULE=config.settings.pro
 
 cd $root/django/
 
-python manage.py collectstatic
+

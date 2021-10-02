@@ -28,6 +28,11 @@ RUN bash /elearning/scripts/pip_install.sh /elearning
 # collect static files 
 RUN bash /elearning/scripts/collect_static.sh /elearning
 
+WORKDIR /elearning/django 
+CMD python manage.py collectstatic
+
+WORKDIR /elearning
+
 # nginx
 COPY nginx/elearning.conf /etc/nginx/sites-available/elearning.conf
 RUN rm /etc/nginx/sites-enabled/*
