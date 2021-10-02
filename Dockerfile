@@ -29,7 +29,7 @@ RUN bash /elearning/scripts/pip_install.sh /elearning
 RUN bash /elearning/scripts/collect_static.sh /elearning
 
 WORKDIR /elearning/django 
-CMD python manage.py collectstatic
+CMD /elearning/venv/bin/python django/manage.py collectstatic -y
 
 WORKDIR /elearning
 

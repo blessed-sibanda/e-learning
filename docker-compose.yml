@@ -10,6 +10,7 @@ services:
       DJANGO_DB_NAME: "${DJANGO_DB_NAME}"
       DJANGO_DB_USER: "${DJANGO_DB_USER}"
       DJANGO_DB_PASSWORD: "${DJANGO_DB_PASSWORD}"
+      POSTGRES_PASSWORD: "${DJANGO_DB_PASSWORD}"
   web:
     build: .
     restart: always
