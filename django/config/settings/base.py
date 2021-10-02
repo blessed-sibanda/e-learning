@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 SECRET_KEY = 'django-insecure-e(exoxgxq7=hl9y9$8kh=315-d((f@0c9p%qk-6unu7ehjn_6p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -127,7 +127,7 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = BASE_DIR.parent / 'media_root'
 
 LOGIN_REDIRECT_URL = reverse_lazy('student_course_list')
 
@@ -157,6 +157,6 @@ CHANNEL_LAYERS = {
     }
 }
 
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = BASE_DIR.parent / 'static_root'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

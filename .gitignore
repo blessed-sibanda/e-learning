@@ -1,12 +1,17 @@
 __pycache__/
 *.pyc
-media/*
 node_modules/
 package.json
 package.*
-static/
+
+
 config/ssl/e_learning.key
 config/logs/nginx_access.log
 
 e_learning.key
 e_learning.crt
+
+static_root/
+media_root/
+
+.env
