@@ -11,6 +11,8 @@ services:
       DJANGO_DB_USER: "${DJANGO_DB_USER}"
       DJANGO_DB_PASSWORD: "${DJANGO_DB_PASSWORD}"
       POSTGRES_PASSWORD: "${DJANGO_DB_PASSWORD}"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
   web:
     build: .
     restart: always
@@ -29,3 +31,11 @@ services:
       DJANGO_DB_PORT: "${DJANGO_DB_PORT}"
       DJANGO_DB_HOST: "${DJANGO_DB_HOST}"
       DJANGO_DB_PASSWORD: "${DJANGO_DB_PASSWORD}"
+    volumes:
+      - static_root:/elearning/static_root
+      - media_root:/elearning/media_root
+
+volumes:
+  postgres_data:
+  static_root:
+  media_root:

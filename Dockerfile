@@ -5,6 +5,7 @@ RUN mkdir /elearning
 WORKDIR /elearning
 COPY requirements.txt /elearning/
 COPY django/ /elearning/django
+COPY static_root/ /elearning/static_root
 COPY scripts/ /elearning/scripts
 RUN mkdir /var/log/elearning/
 RUN touch /var/log/elearning/elearning.log
@@ -26,12 +27,12 @@ RUN virtualenv /elearning/venv
 RUN bash /elearning/scripts/pip_install.sh /elearning
 
 # collect static files 
-RUN bash /elearning/scripts/collect_static.sh /elearning
+# RUN bash /elearning/scripts/collect_static.sh /elearning
 
-WORKDIR /elearning/django 
-CMD /elearning/venv/bin/python django/manage.py collectstatic -y
+# WORKDIR /elearning/django 
+# CMD /elearning/venv/bin/python django/manage.py collectstatic 
 
-WORKDIR /elearning
+# WORKDIR /elearning
 
 # nginx
 COPY nginx/elearning.conf /etc/nginx/sites-available/elearning.conf
@@ -53,4 +54,4 @@ RUN chmod +x /etc/service/uwsgi/run
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-EXPOSE 80
+# EXPOSE 80
