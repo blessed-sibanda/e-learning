@@ -26,14 +26,6 @@ RUN pip3 install virtualenv
 RUN virtualenv /elearning/venv
 RUN bash /elearning/scripts/pip_install.sh /elearning
 
-# collect static files 
-# RUN bash /elearning/scripts/collect_static.sh /elearning
-
-# WORKDIR /elearning/django 
-# CMD /elearning/venv/bin/python django/manage.py collectstatic 
-
-# WORKDIR /elearning
-
 # nginx
 COPY nginx/elearning.conf /etc/nginx/sites-available/elearning.conf
 RUN rm /etc/nginx/sites-enabled/*
@@ -54,4 +46,4 @@ RUN chmod +x /etc/service/uwsgi/run
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-# EXPOSE 80
+EXPOSE 80
