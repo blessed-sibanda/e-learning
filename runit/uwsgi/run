@@ -25,8 +25,7 @@ fi
 
 popd
 
-exec /sbin/setuser www-data \
-    uwsgi \
+exec uwsgi \
     --ini /etc/uwsgi/apps-enabled/elearning.ini \
     >> /var/log/uwsgi/elearning.log \
     2>&1

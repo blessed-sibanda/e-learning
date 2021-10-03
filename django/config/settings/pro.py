@@ -11,10 +11,8 @@ ADMINS = [
     )
 ]
 
-if os.getenv('DJANGO_ALLOWED_HOSTS'):
-    ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS').split(',')
-else:
-    ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS').split(',')
+
 
 SECURE_SSL_REDIRECT = True
 CSRF_COOKIE_SECURE = True
@@ -29,5 +27,3 @@ DATABASES = {
         'PORT': os.getenv('DJANGO_DB_PORT'),
     }
 }
-
-print(ALLOWED_HOSTS)
